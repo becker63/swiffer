@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>spikedev &mdash; spikedev  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install Steps" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> spikedev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#workflow-steps">Workflow steps</a></li>
+</ul>
+<p class="caption"><span class="caption-text">REPL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repl.html">REPL Connection</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-button.html">spikedev.button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-logging.html">spikedev.logging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-motor.html">spikedev.motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-sensor.html">spikedev.sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-stopwatch.html">spikedev.stopwatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-tank.html">spikedev.tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-unit.html">spikedev.unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-wheel.html">spikedev.wheel</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">spikedev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>spikedev</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="spikedev">
+<h1>spikedev<a class="headerlink" href="#spikedev" title="Permalink to this headline">¶</a></h1>
+<p>spikedev is an open source micropython library for
+<a class="reference external" href="https://education.lego.com/en-us/products/lego-education-spike-prime-set/45678#product">LEGO SPIKE</a>.
+The goal of this library is to build on the functionality provided by LEGO’s <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">hub</span></code> library.
+spikedev is not firmware, it is simply a colletion of <code class="docutils literal notranslate"><span class="pre">.py</span></code> files that you copy to your SPIKE hub
+and then import like any other library.</p>
+<p>Many features in spikedev were ported from <a class="reference external" href="https://github.com/ev3dev/ev3dev-lang-python">ev3dev-lang-python</a>.
+If you would like to contribute to spikedev, the source is managed at <a class="reference external" href="https://github.com/dwalton76/spikedev">https://github.com/dwalton76/spikedev</a> .</p>
+</div>
+<div class="section" id="example">
+<h1>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h1>
+<p>The following example of <code class="docutils literal notranslate"><span class="pre">spikedev.tank.MoveDifferential</span></code> can be used for any tank style robot, just substitute
+<code class="docutils literal notranslate"><span class="pre">SpikeLargeWheel</span></code> for the type of wheel you are using and <code class="docutils literal notranslate"><span class="pre">DistanceStuds(19)</span></code> with the number of studs seperating
+your wheels. This example is for the <a class="reference external" href="https://education.lego.com/en-us/lessons/prime-competition-ready/assembling-an-advanced-driving-base">Advanced Driving Base</a></p>
+<img alt="_images/advanced-driving-base.png" src="_images/advanced-driving-base.png" />
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>turn right 90 degrees</p></li>
+<li><p>drive forward 12 inches</p></li>
+<li><p>drive halfway around a cirle with a radius of 8 inches</p></li>
+</ul>
+</div>
+<div class="section" id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run via</span>
+<span class="c1">#  sudo ampy --port &lt;your-dev-here&gt; run ./demo/tank/advanced-driving-base.py</span>
+<span class="kn">import</span> <span class="nn">hub</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">spikedev.motor</span> <span class="kn">import</span> <span class="n">MotorSpeedPercent</span><span class="p">,</span> <span class="n">SpikeLargeMotor</span><span class="p">,</span> <span class="n">SpikeMediumMotor</span>
+<span class="kn">from</span> <span class="nn">spikedev.sensor</span> <span class="kn">import</span> <span class="n">ColorSensor</span>
+<span class="kn">from</span> <span class="nn">spikedev.tank</span> <span class="kn">import</span> <span class="n">MoveDifferential</span>
+<span class="kn">from</span> <span class="nn">spikedev.unit</span> <span class="kn">import</span> <span class="n">DistanceInches</span><span class="p">,</span> <span class="n">DistanceStuds</span>
+<span class="kn">from</span> <span class="nn">spikedev.wheel</span> <span class="kn">import</span> <span class="n">SpikeLargeWheel</span>
+
+<span class="n">adb</span> <span class="o">=</span> <span class="n">MoveDifferential</span><span class="p">(</span>
+   <span class="n">left_motor_port</span><span class="o">=</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">A</span><span class="p">,</span>
+   <span class="n">right_motor_port</span><span class="o">=</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">E</span><span class="p">,</span>
+   <span class="n">wheel_class</span><span class="o">=</span><span class="n">SpikeLargeWheel</span><span class="p">,</span>
+   <span class="n">wheel_distance</span><span class="o">=</span><span class="n">DistanceStuds</span><span class="p">(</span><span class="mi">19</span><span class="p">),</span>
+   <span class="n">motor_class</span><span class="o">=</span><span class="n">SpikeLargeMotor</span>
+<span class="p">)</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">rear_motor</span> <span class="o">=</span> <span class="n">SpikeMediumMotor</span><span class="p">(</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">C</span><span class="p">)</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">front_motor</span> <span class="o">=</span> <span class="n">SpikeMediumMotor</span><span class="p">(</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">D</span><span class="p">)</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">left_color_sensor</span> <span class="o">=</span> <span class="n">ColorSensor</span><span class="p">(</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">right_color_sensor</span> <span class="o">=</span> <span class="n">ColorSensor</span><span class="p">(</span><span class="n">hub</span><span class="o">.</span><span class="n">port</span><span class="o">.</span><span class="n">F</span>
+
+<span class="n">adb</span><span class="o">.</span><span class="n">turn_right</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="n">MotorSpeedPercent</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">run_for_distance</span><span class="p">(</span><span class="n">DistanceInches</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="n">MotorSpeedPercent</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+<span class="n">adb</span><span class="o">.</span><span class="n">run_arc_right</span><span class="p">(</span><span class="n">DistanceInches</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="n">DistanceInches</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">MotorSpeedPercent</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+<iframe width="640" height="360" style="margin-bottom: 25px" src="https://www.youtube.com/embed/vqxpZ1TcWzM" frameborder="0" allowfullscreen="1">&nbsp;</iframe><div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#ampy">ampy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#booting-spike">Booting SPIKE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-spikedev">Install spikedev</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html#workflow-steps">Workflow steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#write-your-program">Write your program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#run-your-program">Run your program</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">REPL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repl.html">REPL Connection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="repl.html#ubuntu">Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repl.html#windows-10">Windows 10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repl.html#mac">Mac</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-button.html">spikedev.button</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-button.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-button.html#module-spikedev.button">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-logging.html">spikedev.logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-logging.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-logging.html#module-spikedev.logging">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-motor.html">spikedev.motor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-sensor.html">spikedev.sensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-sensor.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-sensor.html#module-spikedev.sensor">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-stopwatch.html">spikedev.stopwatch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-stopwatch.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-stopwatch.html#module-spikedev.stopwatch">Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-tank.html">spikedev.tank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-unit.html">spikedev.unit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spikedev-wheel.html">spikedev.wheel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-wheel.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spikedev-wheel.html#module-spikedev.wheel">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install.html" class="btn btn-neutral float-right" title="Install Steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Daniel Walton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
